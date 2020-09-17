@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ddd;
+            margin: 0;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        * {
+            font-family: 'Open Sans', sans-serif;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header {
+            font-size: 34px;
+            color: darkblue;
+            background-color: #262626;
+            color: #fff;
+            width: 100%;
+            padding: 30px;
+            align-content: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            /* background:rgba(0,25,0,0.5); */
+            border: 4px solid#fff;
+            border-radius: 6px;
+            color: #262626;
+            background-color: #f3f3f3;
+            padding: 30px;
+            margin: 30px 100px;
+        }
+
+        .divide {
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 100px;
+        }
+
+        .info_explain {
+            background-color: #fff;
+            padding: 30px;
+            margin: 30px 100px;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 0 12px 12px;
+        }
+
+        .left {
+            flex: 50%;
+            padding: 0 90px;
+        }
+
+        .right {
+            flex: 50%;
+            padding: 0 100px;
+        }
+
+        .left video {
+            height: 300px;
+            width: 500px;
+        }
+
+        .right video {
+            height: 300px;
+            width: 500px;
+        }
+
+        .footer {
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            color: #fff;
+            background: #222;
+            text-align: center;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            margin: 0;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            position: relative;
+            transition: .5s;
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+        }
+
+        .btn img {
+            margin: 0;
+            padding: 0;
+            margin-left: -10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">Chaos Theory</div>
+
+    <h1>Complex pendulum</h1>
+    <p>&nbsp;</p>
+
+    <div class="divide">
+
+        <span class="left">
+
+            <video id="com" src="complex.mp4" controls type="mp4"></video>
+
+        </span>
+
+        <span class="right">
+
+            The definition of Collins dictionary of complex pendulum is a structure mounted so that it can swing freely
+            under the influence of gravity.
+            Complex pendulums can be highly non-linear and behave in a chaotic manner. Complex pendulums consist of
+            multiple bobs and multiple arms attached to itself.
+            Most of the complex pendulums have one pivot point. Now when the complex pendulum is let free in the air it
+            will produce seemingly random but not random swings in the air.
+            This report will explain how complex pendulums are chaotic. Report has multiple
+            complex pendulums which demonstrate the chaotic effect. Report will provide illustrations and animations of
+            how complex pendulums are sensitive to initial conditions.
+
+        </span>
+    </div>
+
+    <h1>Introduction</h1>
+    <p>&nbsp;</p>
+
+    <div class="info">
+
+        Chaos theory is a branch of mathematics foucing on the study of chaos - states of dynamical systems whose
+        apparently random states of disorder and irregularity are often governed by the deterministic laws that are
+        highly sensitive to initial conditions. Such sensitive dependence on initial position means that further one
+        goes into the future the more inaccurate predictions become. Systems that are sensitive to initial conditions
+        are said to be Chaotic.
+        Chaos theory was summarized by Edward Lorenz. Because of the non linearity in the chaotic system it becomes
+        difficult to make accurate predictions about the system over a time particular interval. Example of the
+        application of chaotic theory is weather forecast. (Wikipedia)
+
+
+    </div>
+
+    <h1>Trajectory of double pendulum with small initial change</h1>
+    <p>&nbsp;</p>
+    <div class="divide">
+
+        <span class="left">
+
+        <video src="double_in.mp4" controls type="mp4" id="v1"></video>
+
+        </span>
+
+        <span>
+
+            <button class="btn" onclick="playvideo()"><img src="aa.png" width="65px" height="65px"></button>
+
+        </span>
+
+
+        <span class="right">
+
+            <video src="double_change.mp4" controls type="mp4" id="v2"></video>
+
+        </span>
+
+    </div>
+
+    <div class="info">
+
+        Sensitivity to initial conditions means that a small change in a variable can result in a large change in the
+        trajectory of the pendulum. Even a change as
+        small as 0.000001 degree can have a huge change on the later side of the pendulum that is the path and journey
+        of the trajectory of the pendulum.
+
+    </div>
+
+
+    <h1>Graphical representation of difference in trajectory of double pendulum </h1>
+    <p>&nbsp;</p>
+
+    <div class="divide">
+
+        <span class="left">
+
+            <video src="double_diff.mp4" controls type="mp4"></video>
+
+        </span>
+
+        <span class="right">
+
+            Here the x-axis represents time and the y-axis represents the difference of trajectory. Here the scale of
+            the system is shown at the top-left corner if values are two small, for values closer to the scale of the
+            1000th part,
+            are shown simply with scale of 1. In this animation for sake of observation time moves at 5th of speed. This
+            depicts the chaotic motion of two pendulums against each-other.
+
+        </span>
+    </div>
+    <div class="info">
+        Here we can see that when the Pendulums start out their difference is in the sale of 1E-8 then 1E-6. After a
+        short period their difference grows rapidly to the scale of 1E-3. And then again quickly goes as high as 2 (max
+        distance possible). Then they don't have any correlation and seemingly move randomly.
+
+    </div>
+
+    <h1>Graph of two single pendulums in one and its difference of trajectories</h1>
+    <p>&nbsp;</p>
+
+    <div class="divide">
+
+        <span class="left">
+
+            <video src="single_pen.mp4" controls type="mp4"></video>
+
+        </span>
+
+        <span class="right">
+
+            <video src="single_diff.mp4" controls type="mp4"></video>
+
+        </span>
+
+    </div>
+
+    <div class="info">
+
+        Here x-axis represents time and y-axis represents difference. Here the scale of the system is shown at the
+        top-left corner if values are two small, for values closer to the scale of the 1000th part, are shown simply
+        with scale of 1. In this animation for sake observation time moves at 5th of speed. This depicts very correlated
+        motion of two simple pendulums.
+        Here we can see that when the Pendulums start out their difference is in the sale of 1E-8 then slowly their
+        difference grows. Contrary to double pendulums their motion is much more correlated and their difference looks
+        like a harmonic motion (because it is the difference between two harmonic curves). They stay very correlated and
+        their difference grows predictable (more as time goes) and slowly.
+    </div>
+
+    <h1>Conclusion</h1>
+    <p>&nbsp;</p>
+
+    <div class="info">
+        Through the exploration of the double pendulum we can observe that chaotic systems are not random because if we
+        have set the same initial degree for both of the pendulum the behavior will be excealty same. But we get
+        differences in distance because of the difference in initial condition and for chaotic systems like double
+        pendulum the difference can be very small and still produce big enough differences over time.
+        That's why we can say that double pendulums or any chaotic systems are random but are very sensitive to the
+        initial condition.
+    </div>
+
+    <div class="footer">
+        &copy;All rights reserved.| Report by Arya Patel.
+    </div>
+    <script>
+        var v = document.getElementById('v1');
+        var vv = document.getElementById('v2');
+        function playvideo() {
+            v.play();
+            vv.play();
+        }
+
+        document.getElementById('com').currentTime = 5;
+
+    </script>
+</body>
+
+</html>
